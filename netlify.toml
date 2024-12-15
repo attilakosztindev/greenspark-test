@@ -6,6 +6,12 @@
   command = "yarn test:unit && yarn build && yarn build-storybook"
 
 [[redirects]]
+  from = "/storybook"
+  to = "/storybook/"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/storybook/*"
   to = "/storybook/:splat"
   status = 200
@@ -14,3 +20,8 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[headers]]
+  for = "/storybook/*"
+    [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
