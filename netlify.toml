@@ -9,6 +9,7 @@
   from = "/storybook/*"
   to = "/storybook-static/:splat"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/*"
