@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, watch } from "vue";
+import { useStore } from "vuex";
 import type { Widget } from "@/types";
 import AppSwitch from "@/components/General/AppSwitch/AppSwitch.vue";
 import AppIcon from "@/components/General/AppIcon/AppIcon.vue";
@@ -7,7 +8,6 @@ import AppTooltip from "@/components/General/AppTooltip/AppTooltip.vue";
 import AppCheckbox from "@/components/General/AppCheckbox/AppCheckbox.vue";
 import AppColorSwatch from "@/components/General/AppColorSwatch/AppColorSwatch.vue";
 import AppBadge from "@/components/General/AppBadge/AppBadge.vue";
-import { useStore } from "vuex";
 
 const props = defineProps<{ widget: Widget }>();
 const store = useStore();

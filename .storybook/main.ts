@@ -30,7 +30,7 @@ const config: StorybookConfig = {
       optimizeDeps: {
         include: ["vue", "vuetify"]
       },
-      base: "/storybook/",
+      base: "./",
     })
   }
 }
