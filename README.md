@@ -1,29 +1,34 @@
-# product-widgets-app
+# Product Widgets App
 
-## Project setup
-```
-yarn install
-```
+A Vue 3 application for managing and displaying product widgets with environmental impact information. Built with TypeScript, Vuex, and Vuetify.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Features
 
-### Compiles and minifies for production
-```
-yarn build
-```
+- Interactive product widgets with customizable appearance
+- Environmental impact tracking (plastic, trees, carbon)
+- Color theme customization
+- Responsive design for mobile and desktop
+- Storybook component documentation
+- Unit testing with Jest
+- Continuous Integration with GitHub Actions
 
-### Run your unit tests
-```
-yarn test:unit
-```
+## Tech Stack
 
-### Lints and fixes files
-```
-yarn lint
-```
+- Jest
+- Pug Template Engine
+- Sass
+- Storybook 8
+- TypeScript
+- Vite
+- Vue 3
+- Vuetify 3
+- Vuex 4
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Prerequisites
+
+- Node.js 18 or higher
+- Yarn package manager
+
+## Project Setup
+
+1. Clone the repository:
