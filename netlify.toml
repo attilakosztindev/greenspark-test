@@ -7,7 +7,7 @@
 
 [[redirects]]
   from = "/storybook/*"
-  to = "/storybook/:splat"
+  to = "/storybook-static/:splat"
   status = 200
 
 [[redirects]]
@@ -16,6 +16,6 @@
   status = 200
 
 [[headers]]
-  for = "/storybook/*"
+  for = "/storybook-static/*"
     [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
