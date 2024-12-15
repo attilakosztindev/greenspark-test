@@ -51,7 +51,7 @@ const meta = {
         });
         return { store };
       },
-      template: '<div style="padding: 2rem;"><story /></div>',
+      template: '<div style="padding: 20px;"><story /></div>',
     }),
   ],
   argTypes: {
@@ -94,40 +94,4 @@ export const Default: Story = {
   args: {
     widget: mockWidget,
   },
-};
-
-export const Inactive: Story = {
-  args: {
-    widget: {
-      ...mockWidget,
-      active: false,
-    },
-  },
-};
-
-export const Loading: Story = {
-  args: {
-    widget: mockWidget,
-  },
-  decorators: [
-    (story) => ({
-      components: { story },
-      setup() {
-        const store = createStore({
-          modules: {
-            widgets: {
-              namespaced: true,
-              state: () => ({
-                widgets: [],
-                loading: true,
-                error: null,
-              }),
-            },
-          },
-        });
-        return { store };
-      },
-      template: '<div style="padding: 2rem;"><story /></div>',
-    }),
-  ],
 };

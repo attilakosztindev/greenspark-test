@@ -8,7 +8,7 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build -o storybook-static"
+    "build-storybook": "storybook build -o dist/storybook"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.26.3",
+    "@storybook/addon-a11y": "^8.4.7",
     "@storybook/addon-essentials": "^8.4.7",
     "@storybook/addon-links": "^8.4.7",
     "@storybook/builder-vite": "^8.4.7",

@@ -104,6 +104,6 @@ v-tooltip.app-tooltip(
 
 <style lang="sass">
 .app-tooltip__icon
-  margin: 2px
+  margin: 0 2px
   display: inline-flex
 </style>
