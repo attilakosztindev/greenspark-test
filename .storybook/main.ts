@@ -31,6 +31,15 @@ const config: StorybookConfig = {
         include: ["vue", "vuetify"]
       },
       base: "./",
+      build: {
+        rollupOptions: {
+          output: {
+            assetFileNames: 'assets/[name][extname]',
+            chunkFileNames: 'assets/[name].js',
+            entryFileNames: 'assets/[name].js',
+          }
+        }
+      }
     })
   }
 }
