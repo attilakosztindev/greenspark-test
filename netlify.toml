@@ -16,6 +16,6 @@
   status = 200
 
 [[headers]]
-  for = "/storybook-static/*"
+  for = "/storybook/*"
     [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
