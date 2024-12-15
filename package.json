@@ -5,10 +5,10 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit --passWithNoTests",
+    "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build -o dist/storybook"
+    "build-storybook": "storybook build -o dist/storybook --debug"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
