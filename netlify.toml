@@ -6,15 +6,10 @@
   command = "yarn test:unit && yarn build && yarn build-storybook"
 
 [[redirects]]
-  from = "/storybook"
-  to = "/storybook/"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/storybook/*"
   to = "/storybook/:splat"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/*"
