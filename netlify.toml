@@ -1,0 +1,16 @@
+[build]
+  command = "yarn build && yarn build-storybook"
+  publish = "dist"
+  
+[context.production]
+  command = "yarn test:unit && yarn build && yarn build-storybook"
+
+[[redirects]]
+  from = "/storybook/*"
+  to = "/storybook/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

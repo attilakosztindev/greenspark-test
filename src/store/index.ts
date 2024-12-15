@@ -1,9 +1,8 @@
 import { createStore } from "vuex";
+import widgets from "@/store/modules/widgets";
 
 export default createStore({
-  state: {},
-  getters: {},
-  mutations: {},
-  actions: {},
-  modules: {},
+  modules: {
+    widgets,
+  },
 });

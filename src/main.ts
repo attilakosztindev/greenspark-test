@@ -1,5 +1,10 @@
+import App from "@/App.vue";
+import store from "@/store";
 import { createApp } from "vue";
-import App from "./App.vue";
-import store from "./store";
+import { vuetify } from "@/plugins/vuetify";
 
-createApp(App).use(store).mount("#app");
+const app = createApp(App);
+
+app.use(store);
+app.use(vuetify);
+app.mount("#app");
