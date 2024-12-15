@@ -38,6 +38,9 @@ v-switch.app-switch(
     background-color: rgb(var(--v-theme-app-dirty-white)) !important
     border: 0.5px solid rgb(var(--v-theme-app-beige))
     box-shadow: 0px 0px 1px 0px #00000059
+    
+    @supports (-moz-appearance: none)
+      transform: translateY(-1px)
 
   :deep(input[checked] ~ .v-switch__thumb)
     border: 0.5px solid rgb(var(--v-theme-app-green))

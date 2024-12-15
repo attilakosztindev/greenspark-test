@@ -18,6 +18,7 @@ const config: StorybookConfig = {
   docs: {
     autodocs: true
   },
+  staticDirs: ['../public'],
   async viteFinal(config) {
     return mergeConfig(config, {
       plugins: [vue()],
@@ -28,7 +29,8 @@ const config: StorybookConfig = {
       },
       optimizeDeps: {
         include: ['vue', 'vuetify']
-      }
+      },
+      base: process.env.STORYBOOK_BASE_URL || '/',
     })
   }
 }
