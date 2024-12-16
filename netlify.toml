@@ -25,18 +25,28 @@
   for = "/*.html"
     [headers.values]
     Content-Type = "text/html"
-
-[[headers]]
-  for = "/*.js"
-    [headers.values]
-    Content-Type = "application/javascript"
-
-[[headers]]
-  for = "/*.mjs"
-    [headers.values]
-    Content-Type = "application/javascript"
+    X-Content-Type-Options = "nosniff"
 
 [[headers]]
   for = "/storybook/*.js"
     [headers.values]
     Content-Type = "application/javascript"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/storybook/sb-manager/*.js"
+    [headers.values]
+    Content-Type = "application/javascript"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/storybook/sb-addons/*.js"
+    [headers.values]
+    Content-Type = "application/javascript"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/storybook/sb-preview/*.js"
+    [headers.values]
+    Content-Type = "application/javascript"
+    X-Content-Type-Options = "nosniff"
