@@ -80,6 +80,18 @@ yarn build
 ```bash
 yarn build-storybook
 ```
+## 🎨 Code Standards
+
+The project maintains strict coding standards enforced through ESLint and Prettier configurations. These tools ensure consistent code formatting.
+
+### Code Formatting
+
+- ESLint enforces JavaScript/TypeScript best practices and catches potential errors
+- Prettier handles automated code formatting for consistent style
+
+### CSS/SASS Architecture
+
+The project follows SMACSS (Scalable and Modular Architecture for CSS) methodology for organizing CSS in the style section of each component.
 
 ## 📁 Project Structure
 
