@@ -6,6 +6,12 @@
   command = "yarn test:unit && yarn build && yarn build-storybook"
 
 [[redirects]]
+  from = "/storybook"
+  to = "/storybook/"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/storybook/*"
   to = "/storybook/index.html"
   status = 200
@@ -17,36 +23,38 @@
   status = 200
 
 [[headers]]
+  for = "/*"
+    [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/*.js"
+    [headers.values]
+    Content-Type = "application/javascript"
+
+[[headers]]
   for = "/storybook/*"
     [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
-  for = "/*.html"
+  for = "/storybook/*.html"
     [headers.values]
     Content-Type = "text/html"
-    X-Content-Type-Options = "nosniff"
 
 [[headers]]
   for = "/storybook/*.js"
     [headers.values]
     Content-Type = "application/javascript"
-    X-Content-Type-Options = "nosniff"
 
 [[headers]]
-  for = "/storybook/sb-manager/*.js"
+  for = "/storybook/**/*.js"
     [headers.values]
     Content-Type = "application/javascript"
-    X-Content-Type-Options = "nosniff"
 
 [[headers]]
-  for = "/storybook/sb-addons/*.js"
+  for = "/*.css"
     [headers.values]
-    Content-Type = "application/javascript"
-    X-Content-Type-Options = "nosniff"
-
-[[headers]]
-  for = "/storybook/sb-preview/*.js"
-    [headers.values]
-    Content-Type = "application/javascript"
-    X-Content-Type-Options = "nosniff"
+    Content-Type = "text/css"

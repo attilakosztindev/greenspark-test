@@ -30,7 +30,7 @@ const config: StorybookConfig = {
       optimizeDeps: {
         include: ["vue", "vuetify"]
       },
-      base: "./",
+      base: "/storybook/",
       build: {
         outDir: path.resolve(__dirname, "../dist/storybook"),
         assetsDir: "assets",
