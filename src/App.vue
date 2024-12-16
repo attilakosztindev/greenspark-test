@@ -98,6 +98,9 @@ main.app-page(role="main")
       max-width: 851px
       max-height: 419px
 
+      .product-widgets__title
+        text-align: left
+
       .product-widgets__container
         display: flex
         flex-direction: row
