@@ -68,7 +68,7 @@ main.app-page(role="main")
     box-shadow: 0px 0.78px 2.99px 0px #00000003, 0px 3.42px 6.19px 0px #00000005, 0px 8.4px 12.35px 0px #00000006, 0px 16.18px 24.21px 0px #00000008, 0px 27.22px 44.51px 0px #0000000A, 0px 42px 76px 0px #0000000D
 
     .product-widgets__title
-      padding-bottom: 12px
+      padding-bottom: 10px
       margin-bottom: 20px
       border-bottom: 2px solid rgb(var(--v-theme-app-light-gray))
       font-size: 30px
