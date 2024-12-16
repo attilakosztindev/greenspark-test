@@ -32,11 +32,14 @@ const config: StorybookConfig = {
       },
       base: "./",
       build: {
+        outDir: path.resolve(__dirname, "../dist/storybook"),
+        assetsDir: "assets",
+        copyPublicDir: false,
         rollupOptions: {
           output: {
-            assetFileNames: 'assets/[name][extname]',
-            chunkFileNames: 'assets/[name].js',
-            entryFileNames: 'assets/[name].js',
+            entryFileNames: 'assets/[name]-[hash].js',
+            chunkFileNames: 'assets/[name]-[hash].js',
+            assetFileNames: 'assets/[name]-[hash].[ext]'
           }
         }
       }

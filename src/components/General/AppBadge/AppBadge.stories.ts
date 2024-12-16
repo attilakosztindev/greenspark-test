@@ -12,7 +12,7 @@ const meta = {
     type: {
       control: "select",
       options: ["plastic", "trees", "carbon"],
-      description: "Type of environmental impact",
+      description: "Material of environmental impact",
     },
     action: {
       control: "text",
