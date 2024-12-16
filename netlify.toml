@@ -7,7 +7,7 @@
 
 [[redirects]]
   from = "/storybook/*"
-  to = "/storybook/"
+  to = "/storybook/index.html"
   status = 200
   force = true
 
@@ -20,7 +20,11 @@
   for = "/storybook/*"
     [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
-    Content-Type = "application/javascript"
+
+[[headers]]
+  for = "/*.html"
+    [headers.values]
+    Content-Type = "text/html"
 
 [[headers]]
   for = "/*.js"
@@ -29,5 +33,10 @@
 
 [[headers]]
   for = "/*.mjs"
+    [headers.values]
+    Content-Type = "application/javascript"
+
+[[headers]]
+  for = "/storybook/*.js"
     [headers.values]
     Content-Type = "application/javascript"
