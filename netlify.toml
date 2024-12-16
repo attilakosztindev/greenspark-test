@@ -20,3 +20,14 @@
   for = "/storybook/*"
     [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+    Content-Type = "application/javascript"
+
+[[headers]]
+  for = "/*.js"
+    [headers.values]
+    Content-Type = "application/javascript"
+
+[[headers]]
+  for = "/*.mjs"
+    [headers.values]
+    Content-Type = "application/javascript"
