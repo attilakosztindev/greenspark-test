@@ -6,15 +6,10 @@
   command = "yarn test:unit && yarn build && yarn build-storybook"
 
 [[redirects]]
-  from = "/storybook"
-  to = "/storybook/"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/storybook/*"
-  to = "/storybook/index.html"
+  to = "/storybook/"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/*"
@@ -22,21 +17,17 @@
   status = 200
 
 [[headers]]
-  for = "/*"
+  for = "/storybook/*"
     [headers.values]
-    X-Content-Type-Options = "nosniff"
+    Cache-Control = "public, max-age=0, must-revalidate"
+    Content-Type = "application/javascript"
 
 [[headers]]
-  for = "/storybook/*.(js|mjs)"
+  for = "/*.js"
     [headers.values]
     Content-Type = "application/javascript"
 
 [[headers]]
-  for = "/storybook/*.(css)"
+  for = "/*.mjs"
     [headers.values]
-    Content-Type = "text/css"
-
-[[headers]]
-  for = "/storybook/*.(html)"
-    [headers.values]
-    Content-Type = "text/html"
+    Content-Type = "application/javascript"
