@@ -7,7 +7,7 @@
 
 [[redirects]]
   from = "/storybook/*"
-  to = "/storybook/?path=/docs/product-widget--docs"
+  to = "/storybook/"
   status = 200
   force = true
 
