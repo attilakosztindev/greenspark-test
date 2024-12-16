@@ -15,7 +15,6 @@
   from = "/storybook/*"
   to = "/storybook/index.html"
   status = 200
-  force = true
 
 [[redirects]]
   from = "/*"
@@ -25,36 +24,19 @@
 [[headers]]
   for = "/*"
     [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
 
 [[headers]]
-  for = "/*.js"
+  for = "/storybook/*.(js|mjs)"
     [headers.values]
     Content-Type = "application/javascript"
 
 [[headers]]
-  for = "/storybook/*"
-    [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
-
-[[headers]]
-  for = "/storybook/*.html"
-    [headers.values]
-    Content-Type = "text/html"
-
-[[headers]]
-  for = "/storybook/*.js"
-    [headers.values]
-    Content-Type = "application/javascript"
-
-[[headers]]
-  for = "/storybook/**/*.js"
-    [headers.values]
-    Content-Type = "application/javascript"
-
-[[headers]]
-  for = "/*.css"
+  for = "/storybook/*.(css)"
     [headers.values]
     Content-Type = "text/css"
+
+[[headers]]
+  for = "/storybook/*.(html)"
+    [headers.values]
+    Content-Type = "text/html"
