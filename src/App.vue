@@ -73,7 +73,7 @@ main.app-page(role="main")
       border-bottom: 2px solid rgb(var(--v-theme-app-light-gray))
       font-size: 30px
       line-height: 36px
-      text-align: left
+      text-align: center
 
     .product-widgets__container
       display: flex
