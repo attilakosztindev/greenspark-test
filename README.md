@@ -91,7 +91,7 @@ The project maintains strict coding standards enforced through ESLint and Pretti
 
 ### CSS/SASS Architecture
 
-The project follows SMACSS (Scalable and Modular Architecture for CSS) methodology for organizing CSS in the style section of each component.
+The project follows SMACSS (Scalable and Modular Architecture for CSS) methodology, combined with BEM naming convention for organizing CSS in the style section of each component.
 
 ## 📁 Project Structure
 
