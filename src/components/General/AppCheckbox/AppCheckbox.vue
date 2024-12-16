@@ -17,7 +17,7 @@ const syncRipple = () => {
 <template lang="pug">
 v-checkbox.app-checkbox(
   v-model="isChecked"
-  :class="{ 'checkbox-ischecked': rippleIsActive }"
+  :class="{ 'checkbox-checked': rippleIsActive }"
   @mousedown="syncRipple"
   @touchstart="syncRipple"
   density="comfortable"
@@ -31,10 +31,10 @@ v-checkbox.app-checkbox(
   height: 24px
 
   :deep(.v-selection-control__wrapper)
-    color: rgb(var(--v-theme-app-green))
     position: relative
     width: 24px
     height: 24px
+    color: rgb(var(--v-theme-app-green))
 
     .mdi-checkbox-blank-outline
       opacity: 1
@@ -45,7 +45,7 @@ v-checkbox.app-checkbox(
     width: 18px
     height: 18px
 
-.checkbox-ischecked
+.checkbox-checked
   :deep(.v-selection-control__input)
     &:has(input:not(:checked)) .mdi-checkbox-blank-outline::before
       opacity: 1

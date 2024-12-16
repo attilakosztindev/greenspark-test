@@ -64,15 +64,17 @@ const formattedSubTitle = computed(() => {
 <style lang="sass" scoped>
 .app-badge
 	display: flex
-	align-items: center
-	gap: 10px
+	position: relative
 	width: 100%
 	height: 66px
-	transition: background-color 0.3s
-	background-color: v-bind(selectedHexColor)
-	border-radius: 6px
-	box-shadow: 0px 4px 4px 0px #00000003
+	margin: 0
 	padding: 10.3px 11.9px 10.3px 11.9px
+	border-radius: 6px
+	background-color: v-bind(selectedHexColor)
+	box-shadow: 0px 4px 4px 0px #00000003
+	align-items: center
+	gap: 10px
+	transition: background-color 0.3s
 
 	.app-badge__logo
 		width: 39.5px
@@ -87,8 +89,8 @@ const formattedSubTitle = computed(() => {
 	.app-badge__content
 		display: flex
 		flex-direction: column
+		width: 100%
 		text-align: left
-		flex: 1
 		gap: 4px
 
 		&.app-badge__content-green

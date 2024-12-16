@@ -14,8 +14,8 @@ const props = defineProps<{
 
 <style lang="sass" scoped>
 .app-skeleton-loader
-  height: v-bind(heightM)
   width: 100%
+  height: v-bind(heightM)
   max-width: 779px
   align-self: flex-start
   background-color: rgb(var(--v-theme-app-dirty-white))
@@ -28,8 +28,8 @@ const props = defineProps<{
 
 @media (min-width: 768px)
   .app-skeleton-loader
-    height: v-bind(heightD)
     width: 100%
+    height: v-bind(heightD)
     align-self: flex-start
     background-color: rgb(var(--v-theme-app-dirty-white))
 </style>

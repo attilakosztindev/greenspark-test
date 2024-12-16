@@ -49,10 +49,17 @@ v-tooltip.app-tooltip(
 <style scoped lang="sass">
 .app-tooltip
   .app-tooltip__content
+    position: relative
+    max-width: 248px !important
+    max-height: 162px !important
+    padding: 24px 16px
+    background-color: #fff
+    box-shadow: 0px 0.78px 2.99px 0px #00000003, 0px 3.42px 6.19px 0px #00000005, 0px 8.4px 12.35px 0px #00000006, 0px 16.18px 24.21px 0px #00000008, 0px 27.22px 44.51px 0px #0000000A, 0px 42px 76px 0px #0000000D
     text-align: center
     font-size: 14px
     line-height: 17px
     transition: opacity 0.3s
+    pointer-events: auto
 
   .app-tooltip__content-description
     color: #212121
@@ -61,9 +68,9 @@ v-tooltip.app-tooltip(
     margin-top: 12px
 
     a
-      text-decoration: none
-      font-weight: 700
       color: #3B755F
+      font-weight: 700
+      text-decoration: none
       opacity: 1
       transition: opacity 0.3s
       cursor: pointer
@@ -74,35 +81,29 @@ v-tooltip.app-tooltip(
 :deep(.v-overlay__content)
   position: absolute
   transform: none
-  background-color: #fff
-  max-width: 248px !important
-  max-height: 162px !important
-  box-shadow: 0px 0.78px 2.99px 0px #00000003, 0px 3.42px 6.19px 0px #00000005, 0px 8.4px 12.35px 0px #00000006, 0px 16.18px 24.21px 0px #00000008, 0px 27.22px 44.51px 0px #0000000A, 0px 42px 76px 0px #0000000D
-  pointer-events: auto
-  padding: 24px 16px
 
 .v-overlay
-  transition: all 0.3s
   opacity: 0
   visibility: hidden
+  transition: all 0.3s
+
 .v-overlay--active
   opacity: 1
   visibility: visible
 
 .fade-leave-active
-  visibility: visible
   opacity: 1
+  visibility: visible
 
 .fade-enter-active, .fade-leave-active
-  transition: opacity 0.3s
+  opacity: 1
   visibility: visible
+  transition: opacity 0.3s
 
 .fade-enter, .fade-leave-to
-  visibility: visible
   opacity: 0
-</style>
+  visibility: visible
 
-<style lang="sass">
 .app-tooltip__icon
   margin: 0 2px
   display: inline-flex

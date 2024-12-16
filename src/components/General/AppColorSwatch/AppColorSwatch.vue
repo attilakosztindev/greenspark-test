@@ -32,17 +32,18 @@ fieldset.app-color-swatch(
 <style lang="sass" scoped>
 .app-color-swatch
   display: flex
-  gap: 4px
+  width: auto
   border: none
+  gap: 4px
 
   .app-color-swatch__item
     width: 16px
     height: 16px
-    box-shadow: 0px 4px 4px 0px #00000003
-    cursor: pointer
-    opacity: 1
     border: 0
+    box-shadow: 0px 4px 4px 0px #00000003
+    opacity: 1
     transition: opacity 0.2s, border 0.2s
+    cursor: pointer
 
     &.app-color-swatch__item:hover
       opacity: 0.8

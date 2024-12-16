@@ -98,10 +98,10 @@ article.product-widget(aria-labelledby="widget-title")
 .product-widget
   display: flex
   flex-direction: column
-  gap: 10px
   width: 100%
-  max-width: 221.3px
   height: 152px
+  max-width: 221.3px
+  gap: 10px
 
   .product-widget__sections
     display: flex
@@ -116,10 +116,10 @@ article.product-widget(aria-labelledby="widget-title")
     .product-widget__section-title
       display: flex
       align-items: flex-start
+      color: rgb(var(--v-theme-app-green))
       font-size: 14px
       line-height: 17px
       font-weight: 400
-      color: rgb(var(--v-theme-app-green))
 
 @media (min-width: 768px)
   .product-widget
